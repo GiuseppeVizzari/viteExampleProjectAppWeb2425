@@ -14,12 +14,6 @@ function DynamicList() {
         setElement(""); // RIGHT!
     }
 
-    /* useEffect(() => {
-        if(element !== null) {
-            console.log("Added element: ", element);
-        }
-    }, [element]); */
-
     function deleteItem(key) {
         //console.log("Deleting:" + key);
         const updatedList = elementsList.filter(item => key !== item.myKey);
@@ -28,7 +22,7 @@ function DynamicList() {
 
     function remElement() {
         setElementsList(elementsList.slice(0,-1))
-        //setElements(elements - 1);
+        //setElements(elements - 1); // Check what happens if we keep this one
     }
 
     return (
